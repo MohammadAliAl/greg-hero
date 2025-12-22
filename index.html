@@ -1,373 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NXTGEN - Smart Gadgets for Everyday Life</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            font-family: 'Inter', sans-serif;
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-in;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-        
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- Navigation -->
-<nav class="bg-white/70 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-white/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      class="bg-white/70 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-white/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <div class="flex items-center">
-                <h1 class="text-2xl font-bold text-gray-900">NXTGEN</h1>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">Home</a>
-                <a href="https://nextgenelectra.netlify.app/" class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">Shop</a>
-                <a href="#about" class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">About</a>
-                <a href="#support" class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200">Support</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="https://nextgenelectra.netlify.app/#Search2">
-                    <button class="text-gray-700 hover:text-gray-900 transition-colors duration-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </button>
-                </a>
-                <a href="https://nextgenelectra.netlify.app/cart">
-                <button class="text-gray-700 hover:text-gray-900 transition-colors duration-200">
-                    
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    
-                </button>
-                </a>
-            </div>
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-gray-900">NXTGEN</h1>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              >Home</a
+            >
+            <a
+              href="https://nextgenelectra.netlify.app/"
+              class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              >Shop</a
+            >
+            <a
+              href="https://nextgenelectra.netlify.app/about"
+              class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              >About Us</a
+            >
+            <a
+              href="https://nextgenelectra.netlify.app/contact"
+              class="text-gray-700 hover:text-gray-900 font-medium transition-colors duration-200"
+              >Contact Us</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a href="https://nextgenelectra.netlify.app/#Search2">
+              <button
+                class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+            </a>
+            <a href="https://nextgenelectra.netlify.app/cart">
+              <button
+                class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </button>
+            </a>
+          </div>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Smart Gadgets<br>for Everyday Life</h2>
-                    <p class="text-xl text-gray-600 mb-8">Premium consumer electronics tested for performance and reliability.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://nextgenelectra.netlify.app/">
-                        <button class="btn-primary bg-gray-900 text-white px-8 py-3 rounded-lg font-medium">Shop Now</button>
-                        </a>
-                        <a href="#shop">
-                        <button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition">Explore Products</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="fade-in">
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=600&fit=crop" alt="Wireless Earbuds" class="rounded-2xl shadow-2xl">
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <h2 class="text-5xl font-bold text-gray-900 mb-6">
+              Smart Gadgets<br />for Everyday Life
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+              Premium consumer electronics tested for performance and
+              reliability.
+            </p>
+            <div class="flex space-x-4">
+              <a href="https://nextgenelectra.netlify.app/">
+                <button
+                  class="btn-primary bg-gray-900 text-white px-8 py-3 rounded-lg font-medium"
+                >
+                  Shop Now
+                </button>
+              </a>
+              <a href="#shop">
+                <button
+                  class="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition"
+                >
+                  Explore Products
+                </button>
+              </a>
             </div>
+          </div>
+          <div class="fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=600&fit=crop"
+              alt="Wireless Earbuds"
+              class="rounded-2xl shadow-2xl"
+            />
+          </div>
         </div>
+      </div>
     </section>
-
-
 
     <!-- Quality Promise Section -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">Quality Promise</h3>
-                <p class="text-lg text-gray-600">Every NXTGEN product is tested for quality and performance before it reaches you.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Performance Tested</h4>
-                    <p class="text-gray-600">Rigorous testing for top tier performance</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Carefully Packed</h4>
-                    <p class="text-gray-600">Secure and protective packaging</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Support Ready</h4>
-                    <p class="text-gray-600">Expert assistance when you need it</p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl font-bold text-gray-900 mb-4">Quality Promise</h3>
+          <p class="text-lg text-gray-600">
+            Every NXTGEN product is tested for quality and performance before it
+            reaches you.
+          </p>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Performance Tested
+            </h4>
+            <p class="text-gray-600">
+              Rigorous testing for top tier performance
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Carefully Packed
+            </h4>
+            <p class="text-gray-600">Secure and protective packaging</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover-scale text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">Support Ready</h4>
+            <p class="text-gray-600">Expert assistance when you need it</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Categories Section -->
     <section id="shop" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">CATEGORIES</h3>
-                <p class="text-lg text-gray-600">Explore our product range</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <a href="https://nextgenelectra.netlify.app/?search=audio">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop" alt="Audio Accessories" class="w-full h-64 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900">Audio Accessories</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="https://nextgenelectra.netlify.app/?search=Grooming">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=600&h=400&fit=crop" alt="Smart Grooming" class="w-full h-64 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900">Smart Grooming</h4>
-                    </div>
-                </div>
-                </a>
-                <a href="https://nextgenelectra.netlify.app/?search=Wellness">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="Wellness Gadgets" class="w-full h-64 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900">Wellness Gadgets</h4>
-                    </div>
-                </div>
-                </a>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h3 class="text-4xl font-bold text-gray-900 mb-4">CATEGORIES</h3>
+          <p class="text-lg text-gray-600">Explore our product range</p>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <a href="https://nextgenelectra.netlify.app/?search=audio">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=400&fit=crop"
+                alt="Audio Accessories"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6 text-center">
+                <h4 class="text-xl font-bold text-gray-900">
+                  Audio Accessories
+                </h4>
+              </div>
+            </div>
+          </a>
+          <a href="https://nextgenelectra.netlify.app/?search=Grooming">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=600&h=400&fit=crop"
+                alt="Smart Grooming"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6 text-center">
+                <h4 class="text-xl font-bold text-gray-900">Smart Grooming</h4>
+              </div>
+            </div>
+          </a>
+          <a href="https://nextgenelectra.netlify.app/?search=Wellness">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale cursor-pointer"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop"
+                alt="Wellness Gadgets"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6 text-center">
+                <h4 class="text-xl font-bold text-gray-900">
+                  Wellness Gadgets
+                </h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Why NXTGEN Section -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">WHY NXTGEN</h3>
-                <p class="text-lg text-gray-600">Designed for performance, built for trust.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Built for real-world use</h4>
-                    <p class="text-gray-600">Durable, reliable, and ready for everyday demands.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Strict quality checks</h4>
-                    <p class="text-gray-600">Every product tested to meet our high standards.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
-                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">Honest pricing, no hype</h4>
-                    <p class="text-gray-600">Fair prices with no hidden fees or gimmicks.</p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl font-bold text-gray-900 mb-4">WHY NXTGEN</h3>
+          <p class="text-lg text-gray-600">
+            Designed for performance, built for trust.
+          </p>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Built for real-world use
+            </h4>
+            <p class="text-gray-600">
+              Durable, reliable, and ready for everyday demands.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Strict quality checks
+            </h4>
+            <p class="text-gray-600">
+              Every product tested to meet our high standards.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold text-gray-900 mb-3">
+              Honest pricing, no hype
+            </h4>
+            <p class="text-gray-600">
+              Fair prices with no hidden fees or gimmicks.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Featured Products Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-12">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">FEATURED PRODUCTS</h3>
-                <p class="text-lg text-gray-600">Discover our latest innovative devices</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
-                    <div class="bg-gray-50 p-8">
-                        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=300&fit=crop" alt="Wireless Earbuds" class="w-full h-64 object-contain">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Wireless Earbuds</h4>
-                        <p class="text-2xl font-bold text-gray-900 mb-4">₹9,999</p>
-                        <a href="https://nextgenelectra.netlify.app/?search=earbuds">
-                        <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition">View Item</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
-                    <div class="bg-gray-50 p-8">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F61r7E-jicEL._AC_.jpg&f=1&nofb=1&ipt=ca90dc4d74994ef98650993945f2b184bd617130bebd23c0f9030844ec9ad299" alt="Massage Gun" class="w-full h-64 object-contain">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Massage Gun</h4>
-                        <p class="text-2xl font-bold text-gray-900 mb-4">₹14,999</p>
-                        <a href="https://nextgenelectra.netlify.app/?search=massage+gun">
-                        <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition">View Item</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale">
-                    <div class="bg-gray-50 p-8">
-                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop" alt="Wireless Headphones" class="w-full h-64 object-contain">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Wireless Headphones</h4>
-                        <p class="text-2xl font-bold text-gray-900 mb-4">₹12,499</p>
-                        <a href="https://nextgenelectra.netlify.app/?search=wireless+headphones">
-                        <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition">View Item</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h3 class="text-4xl font-bold text-gray-900 mb-4">
+            FEATURED PRODUCTS
+          </h3>
+          <p class="text-lg text-gray-600">
+            Discover our latest innovative devices
+          </p>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale"
+          >
+            <div class="bg-gray-50 p-8">
+              <img
+                src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=400&h=300&fit=crop"
+                alt="Wireless Earbuds"
+                class="w-full h-64 bg-cover rounded-lg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">
+                Wireless Earbuds
+              </h4>
+              <p class="text-2xl font-bold text-gray-900 mb-4">₹9,999</p>
+              <a href="https://nextgenelectra.netlify.app/?search=earbuds">
+                <button
+                  class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition"
+                >
+                  View Item
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale"
+          >
+            <div class="bg-gray-50 p-8">
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffintys.com.au%2Fwp-content%2Fuploads%2F2020%2F09%2FMassage-Gun.jpg&f=1&nofb=1&ipt=ef169e76f9c46b44a0c52bb3edaef8739e7ffff7b416cf0c00da2cdcb136dfbd"
+                alt="Massage Gun"
+                class="w-full h-64 bg-cover rounded-lg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">Massage Gun</h4>
+              <p class="text-2xl font-bold text-gray-900 mb-4">₹14,999</p>
+              <a href="https://nextgenelectra.netlify.app/?search=massage+gun">
+                <button
+                  class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition"
+                >
+                  View Item
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale"
+          >
+            <div class="bg-gray-50 p-8">
+              <img
+                src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop"
+                alt="Wireless Headphones"
+                class="w-full h-64 bg-cover rounded-lg"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">
+                Wireless Headphones
+              </h4>
+              <p class="text-2xl font-bold text-gray-900 mb-4">₹12,499</p>
+              <a
+                href="https://nextgenelectra.netlify.app/?search=wireless+headphones"
+              >
+                <button
+                  class="w-full bg-gray-900 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition"
+                >
+                  View Item
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Built on Reliability Section -->
-    <section id="about" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">BUILT ON RELIABILITY</h3>
-                <p class="text-lg text-gray-600">Every NXTGEN product goes through a clear process before it reaches you.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-3xl font-bold text-gray-300 mb-4">01</div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900 mb-2">Quality Check</h4>
-                    <p class="text-gray-600 text-sm">Tested Before Dispatch</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-3xl font-bold text-gray-300 mb-4">02</div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900 mb-2">Secure Payments</h4>
-                    <p class="text-gray-600 text-sm">Encrypted & Safe</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-3xl font-bold text-gray-300 mb-4">03</div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900 mb-2">Fast Shipping</h4>
-                    <p class="text-gray-600 text-sm">Reliable Dispatch</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <div class="text-3xl font-bold text-gray-300 mb-4">04</div>
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-900 mb-2">Easy Replacement</h4>
-                    <p class="text-gray-600 text-sm">Simple Support</p>
-                </div>
-            </div>
+    <section
+      id="about"
+      class="py-20 bg-gradient-to-br from-gray-50 to-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h3 class="text-4xl font-bold text-gray-900 mb-4">
+            BUILT ON RELIABILITY
+          </h3>
+          <p class="text-lg text-gray-600">
+            Every NXTGEN product goes through a clear process before it reaches
+            you.
+          </p>
         </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <div class="text-3xl font-bold text-gray-300 mb-4">01</div>
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Quality Check</h4>
+            <p class="text-gray-600 text-sm">Tested Before Dispatch</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <div class="text-3xl font-bold text-gray-300 mb-4">02</div>
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">
+              Secure Payments
+            </h4>
+            <p class="text-gray-600 text-sm">Encrypted & Safe</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <div class="text-3xl font-bold text-gray-300 mb-4">03</div>
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Fast Shipping</h4>
+            <p class="text-gray-600 text-sm">Reliable Dispatch</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <div class="text-3xl font-bold text-gray-300 mb-4">04</div>
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-gray-900"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">
+              Easy Replacement
+            </h4>
+            <p class="text-gray-600 text-sm">Simple Support</p>
+          </div>
+        </div>
+      </div>
     </section>
-        <!-- Designed for Real Life Section -->
+    <!-- Designed for Real Life Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop" alt="Working Professional" class="rounded-2xl shadow-xl">
-                </div>
-                <div>
-                    <p class="text-sm font-semibold text-gray-500 mb-4">NXTGEN</p>
-                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Designed for Real Life</h3>
-                    <p class="text-lg text-gray-600 mb-8">Technology that fits seamlessly into your everyday routine.</p>
-                    <a href="#" class="text-gray-900 font-medium inline-flex items-center hover:underline">
-                        Explore Products
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop"
+              alt="Working Professional"
+              class="rounded-2xl shadow-xl"
+            />
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-500 mb-4">NXTGEN</p>
+            <h3 class="text-4xl font-bold text-gray-900 mb-6">
+              Designed for Real Life
+            </h3>
+            <p class="text-lg text-gray-600 mb-8">
+              Technology that fits seamlessly into your everyday routine.
+            </p>
+            <a
+              href="https://nextgenelectra.netlify.app/"
+              class="text-gray-900 font-medium inline-flex items-center hover:underline"
+            >
+              Explore Products
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Footer -->
     <footer id="support" class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">NXTGEN</h3>
-                    <p class="text-gray-400">Smart gadgets for everyday performance.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">About</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Support</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Policies</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Return Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex justify-between items-center pt-8 border-t border-gray-800">
-                <p class="text-gray-400">© NXTGEN. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">NXTGEN</h3>
+            <p class="text-gray-400">Smart gadgets for everyday performance.</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">About</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://nextgenelectra.netlify.app/contact#support" class="text-gray-400 hover:text-white">Support</a>
+              </li>
+              <li>
+                <a href="https://nextgenelectra.netlify.app/contact#faq" class="text-gray-400 hover:text-white">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Policies</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between items-center pt-8 border-t border-gray-800"
+        >
+          <p class="text-gray-400">© NXTGEN. All rights reserved.</p>
+
+          <div class="flex space-x-6">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/lussolane?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              class="text-gray-400 hover:text-white"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7.75 2h8.5C19.43 2 22 4.57 22 7.75v8.5
+      C22 19.43 19.43 22 16.25 22h-8.5
+      C4.57 22 2 19.43 2 16.25v-8.5
+      C2 4.57 4.57 2 7.75 2zm0 1.5
+      C5.4 3.5 3.5 5.4 3.5 7.75v8.5
+      C3.5 18.6 5.4 20.5 7.75 20.5h8.5
+      c2.35 0 4.25-1.9 4.25-4.25v-8.5
+      c0-2.35-1.9-4.25-4.25-4.25h-8.5z"
+                />
+                <path
+                  d="M12 7a5 5 0 1 0 0 10
+      5 5 0 0 0 0-10zm0 1.5
+      a3.5 3.5 0 1 1 0 7
+      3.5 3.5 0 0 1 0-7z"
+                />
+                <circle cx="17.5" cy="6.5" r="1.2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
